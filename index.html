@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Corte de MDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Orçamento de Corte de MDF</h1>
+        <form id="form-orcamento">
+            <label for="espessura">Espessura da Chapa:</label>
+            <select id="espessura" name="espessura">
+                <option value="3">3mm</option>
+                <option value="6">6mm</option>
+            </select>
+            
+            <label for="largura">Largura da Peça (mm):</label>
+            <input type="number" id="largura" name="largura" required>
+            
+            <label for="altura">Altura da Peça (mm):</label>
+            <input type="number" id="altura" name="altura" required>
+            
+            <label for="percurso">Percurso (mm):</label>
+            <input type="number" id="percurso" name="percurso" required>
+            
+            <label for="velocidade">Velocidade (mm/s):</label>
+            <input type="number" id="velocidade" name="velocidade" required>
+            
+            <button type="button" onclick="calcularOrcamento()">Calcular</button>
+        </form>
+
+        <div id="resultado">
+            <h2>Resultado do Orçamento</h2>
+            <p id="tempo-gasto"></p>
+            <p id="custo-material"></p>
+            <p id="valor-mao-de-obra"></p>
+            <p id="valor-sugerido"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
