@@ -1,5 +1,6 @@
 function calcularOrcamento() {
     // Inputs
+    const material = document.getElementById('material').value;
     const espessura = parseInt(document.getElementById('espessura').value);
     const largura = parseInt(document.getElementById('largura').value);
     const altura = parseInt(document.getElementById('altura').value);
@@ -7,15 +8,22 @@ function calcularOrcamento() {
     const velocidade = parseInt(document.getElementById('velocidade').value);
 
     // Constantes
-    const custo3mm = 89.84;
-    const custo6mm = 120.00;
+    const custoMDF3mm = 89.84;
+    const custoMDF6mm = 120.00;
+    const custoAcrilico3mm = 80.00;
+    const custoAcrilico6mm = 160.00;
     const valorHora = 72.90;
 
     // Calculando a área
     const areaPeca = largura * altura;
 
     // Calculando o custo do material
-    const custoMaterial = espessura === 3 ? (areaPeca * custo3mm / (2750 * 1850)) : (areaPeca * custo6mm / (2750 * 1850));
+    let custoMaterial = 0;
+    if (material === 'mdf') {
+        custoMaterial = espessura === 3 ? (areaPeca * custoMDF3mm / (2750 * 1850)) : (areaPeca * custoMDF6mm / (2750 * 1850));
+    } else if (material === 'acrilico') {
+        custoMaterial = espessura === 3 ? (areaPeca * custoAcrilico3mm / (600 * 400)) : (areaPeca * custoAcrilico6mm / (600 * 400));
+    }
 
     // Calculando o tempo gasto
     const tempoGastoSegundos = percurso / velocidade;
