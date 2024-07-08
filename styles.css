@@ -51,8 +51,28 @@ button:hover {
     background: #e9ecef;
     padding: 15px;
     border-radius: 8px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Esconde a seção por padrão */
+}
+
+#resultado.show {
+    display: block; /* Mostra a seção quando a classe 'show' é adicionada */
+}
+
+#resultado h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
 #resultado p {
-    margin: 5px 0;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #333;
 }
