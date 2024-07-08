@@ -40,4 +40,7 @@ function calcularOrcamento() {
     document.getElementById('custo-material').innerText = `Custo do Material: R$ ${custoMaterial.toFixed(2)}`;
     document.getElementById('valor-mao-de-obra').innerText = `Valor da Mão de Obra: R$ ${valorMaoDeObra.toFixed(2)}`;
     document.getElementById('valor-sugerido').innerText = `Valor Sugerido para Venda: R$ ${valorSugerido.toFixed(2)}`;
+
+    // Mostrando a seção de resultados
+    document.getElementById('resultado').classList.add('show');
 }
