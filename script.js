@@ -12,7 +12,7 @@ function calcularOrcamento() {
     const custoMDF6mm = 120.00;
     const custoAcrilico3mm = 80.00;
     const custoAcrilico6mm = 160.00;
-    const valorHora = 72.90;
+    const valorHora = 52.90;
 
     // Calculando a área
     const areaPeca = largura * altura;
