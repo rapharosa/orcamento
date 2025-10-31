@@ -8,11 +8,11 @@ function calcularOrcamento() {
     const velocidade = parseInt(document.getElementById('velocidade').value);
 
     // Constantes
-    const custoMDF3mm = 89.84;
+    const custoMDF3mm = 85.97;
     const custoMDF6mm = 120.00;
     const custoAcrilico3mm = 80.00;
     const custoAcrilico6mm = 160.00;
-    const valorHora = 72.90;
+    const valorHora = 70;
 
     // Calculando a área
     const areaPeca = largura * altura;
@@ -44,3 +44,4 @@ function calcularOrcamento() {
     // Mostrando a seção de resultados
     document.getElementById('resultado').classList.add('show');
 }
+
